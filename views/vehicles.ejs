@@ -1,0 +1,78 @@
+<html lang="en">
+	<head>
+		<% include ./partials/head %>
+		
+	</head>
+
+	<body class ="container">
+		<header>
+			<% include ./partials/header %>
+		</header>
+
+		<main>
+
+
+			<div class="row">
+					<% for (var i = 0; i < vehicles.Data.length; i++) { %>
+				<div class="col-md-4">
+
+					<h1> Name: <%= vehicles.Data[i].Name %></h1>
+					<% if ( vehicles.Data[i].Speed > 50  ) { %>
+					
+						<h3 style="color:red;"> Caution Exceeding the speed limit </h3>
+					
+					<% } %>
+					<p> Speed: <%= vehicles.Data[i].Speed.BaseValue %>km/h  </p>
+					<p> Gas: <%= vehicles.Data[i].FuelLevel.Value %>%</p>
+					<% if ( vehicles.Data[i].FuelLevel.Value < 30 ) { %>
+						<h3 style="color:red;"> Fuel running low </h3>
+					<% } %>
+					<p> Location: <%= vehicles.Data[i].Location.Address.City %> </p>
+
+					<% if ( vehicles.Data[i].Location.Address.City == "Malibu" ) { %>
+						<h3 style="color:red;"> At Home </h3>
+					<% } %>
+
+
+				</div>
+
+					<% } %>
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+						<div class="row">
+					<div class="col-md-4">
+
+					<h1> Name: Jessica's car</h1>
+					
+						<h3 style="color:red;"> Caution Exceeding the speed limit </h3>
+					
+					<p> Speed: 70km/h  </p>
+					<p> Gas: 10 %>%</p>
+						<h3 style="color:red;"> Fuel running low </h3>
+					
+					<p> Location: Malibu %> </p>
+					<h3 style="color:red;"> At Home </h3>
+
+					<button type="button" class="btn btn-warning"><a href="/testtwilio"> REMIND </a></button>
+
+
+
+				</div>
+			</div>
+
+
+		</main>
+
+
+		<footer>
+			<% include ./partials/footer %>
+		</footer>
+		
+	</body>	
+
+
+</html>

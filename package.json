@@ -1,0 +1,24 @@
+{
+  "name": "mpa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agenda": "~0.6.26",
+    "datejs": "~1.0.0-rc3",
+    "ejs": "^2.5.2",
+    "express": "~4.11.1",
+    "googleapis": "~1.1.1",
+    "http": "0.0.0",
+    "mojio-js": "^3.5.2",
+    "mongodb": "~1.4.30",
+    "request": "^2.78.0",
+    "simple-oauth2": "^1.0.0",
+    "twilio": "~1.10.0"
+  }
+}
